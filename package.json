@@ -1,0 +1,43 @@
+{
+  "name": "agentloop",
+  "version": "0.1.0",
+  "description": "A small, provider-agnostic AI agent runtime: typed tools, a safe tool-calling loop, Claude and Gemini adapters.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "test": "vitest run",
+    "agent": "tsx src/cli.ts"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "llm",
+    "tool-calling",
+    "claude",
+    "gemini",
+    "typescript"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "types": "dist/index.d.ts",
+  "bin": {
+    "agentloop": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}
